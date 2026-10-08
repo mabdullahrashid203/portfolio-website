@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: darkgray;
+    width: 280px;
+    min-height: 100vh;
+    padding-top: 45px;
+}
+
+.sidebar nav {
+    padding: 0 22px;
+}
+
+.sidebar nav li {
+    list-style: none;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.sidebar nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.main {
+    width: 90vw;
+    min-height: 100vh;
+    padding-top: 70px;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.ham,
+.cross {
+    display: block;
+}
+
+.cross {
+    display: none;
+}
+
+.infoContainer {
+    width: 80%;
+    height: 58vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.devpic img {
+    height: 58vh;
+}
+
+.devinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.hello {
+    font-size: 37px;
+}
+
+.name {
+    font-size: 33px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+.moreabout {
+    font-weight: bolder;
+    margin: 19px 0;
+    max-width: 650px;
+}
+
+.buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 22px;
+    color: white;
+    background-color: dodgerblue;
+    margin-right: 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: dodgerblue;
+    background-color: white;
+}
+
+.btn-sm {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 22px;
+    color: white;
+    background-color: dodgerblue;
+    padding: 7px 13px;
+    margin: 10px 0;
+}
+
+.btn-sm:hover {
+    color: dodgerblue;
+    background-color: white;
+}
+
+.contactform {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 50px;
+}
+
+.contactform h1 {
+    font-family: 'Source Code Pro', monospace;
+    padding: 12px 0;
+}
+
+.contactform form div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform form div input {
+    width: 26vw;
+    border-radius: 5px;
+    margin: 6px 0;
+    padding: 8px;
+}
+
+#emailHelp {
+    font-size: 12px;
+    color: midnightblue;
+    margin: 0 5px;
+}
+
+#form-check {
+    flex-direction: row;
+}
+
+#form-check-input {
+    width: 24px;
+    margin: 3px 0;
+}
+
+.blogitems {
+    margin: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    margin: 20px;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.intro {
+    padding: 20px;
+}
+
+.intro h2 {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 20px 0 12px;
+}
+
+.intro p {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 12px 0;
+    max-width: 1000px;
+}
+
+.skillcontainer {
+    padding: 12px 0;
+}
+
+.skillitem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.skills {
+    width: 265px;
+    height: 8px;
+    background-color: dodgerblue;
+    border-radius: 5px;
+}
+
+.projectcontainer {
+    padding: 12px 0;
+}
+
+.projectcard {
+    margin: 18px 0;
+    padding: 15px;
+    border-left: 4px solid dodgerblue;
+    background-color: #f5f5f5;
+}
+
+.projectcard h3 {
+    font-family: 'Fira Sans', sans-serif;
+    margin-bottom: 8px;
+}
+
+.projectcard p {
+    margin: 0;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        min-height: 100vh;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .main {
+        width: 100vw;
+    }
+
+    .hamburger {
+        display: block;
+        
+    }
+
+    .infoContainer {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .devinfo {
+        margin-top: 40px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hello {
+        font-size: 30px;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .about {
+        font-size: 15px;
+    }
+
+    .moreabout {
+        font-size: 14px;
+    }
+
+    .devpic img {
+        height: 40vh;
+        margin-top: 30px;
+    }
+
+    .intro {
+        padding: 20px;
+    }
+
+    .contactform {
+        padding: 30px 20px;
+    }
+
+    .contactform form div input {
+        width: 80vw;
+    }
+
+    .skills {
+        width: 180px;
+    }
+
+}
